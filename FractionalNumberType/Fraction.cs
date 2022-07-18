@@ -133,8 +133,8 @@ namespace FractionalNumberType
         }
         public static Fraction operator /(Fraction a, Fraction b)
         {
-            var numA = a.Numerator;
-            var numB = b.Numerator;
+            var numA = a.WholeNumber * a.Denomenator + a.Numerator;
+            var numB = b.WholeNumber * b.Denomenator + b.Numerator;
             var denA = a.Denomenator;
             var denB = b.Denomenator;
             MathUtils.Reduce(ref numA, ref numB);
